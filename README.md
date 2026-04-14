@@ -168,6 +168,23 @@ The dashboard is optimized for:
 - **Offline-first**: All functionality works without internet connection
 - **Mobile-friendly**: Responsive design works on all devices
 
+## Architecture Diagram (hand-drawn v0)
+![Architecture](https://mermaid.ai/live/)  
+<img width="1307" height="782" alt="image" src="https://github.com/user-attachments/assets/f6d834b0-d049-42a9-9f2f-a9f14fb73f0f" />
+
+
+## Screenshot
+![Dashboard Screenshot])
+
+
+## Pain Log – What Hurt in v0
+- HTMX navigation + standard forms = full page redirects (fixed in v0.1)
+- Claude kept fighting JS vs HTMX conflicts for ~40 minutes
+- Committing db/memory files (fixed with .gitignore in v0.1)
+- No GPU passthrough config yet
+- Zero screenshots/diagram in initial README
+
+
 ## License
 
 MIT

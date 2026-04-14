@@ -1,0 +1,16 @@
+[Unit]
+Description=Life Dashboard Service
+After=network.target
+
+[Service]
+Type=simple
+User=devops
+Group=devops
+WorkingDirectory=/home/devops/Desktop/aetherforge/q1/life-dashboard
+Environment=PYTHONPATH=/home/devops/Desktop/aetherforge/q1/life-dashboard
+ExecStart=/usr/local/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Life Dashboard</h1>
+            <p>Personal metrics and AI insights</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="nav-link active" hx-get="/api/metrics" hx-target="#dashboard-content" hx-swap="innerHTML">Dashboard</a></li>
+                <li><a href="#ai" class="nav-link" hx-get="/ai-insights" hx-target="#ai-content" hx-swap="innerHTML">AI Insights</a></li>
+                <li><a href="#memory" class="nav-link" hx-get="/memory" hx-target="#memory-content" hx-swap="innerHTML">Memory</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="dashboard-content">
+                <!-- Dashboard content will be loaded here -->
+                <div class="loading">Loading dashboard...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Life Dashboard v0.1 | Running locally</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
